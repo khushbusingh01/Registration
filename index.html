@@ -1,157 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Document</title>
+
+    <title>Shopping Cart</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet"href ="index.css">
+    <link rel="stylesheet" href="index.css">
+
 </head>
+
 <body>
-    <div class="box">
-    <h2>Sign Up</h2>
-    <form>
-        <label>First Name</label>
-        <input type="text" placeholder=""><br>
-        <label>Last Name</label>
-        <input type ="text" placeholder=""><br>
-        <label>Email</label>
-        <input type ="email"placeholder=""><br>
-        <label>Password</label>
-        <input type ="password" placeholder=""><br>
-        <label>Confim Password</label>
-        <input type="password"placeholder=""><br>
-        <label>Gender</label>
-        <label>Male</label>
-        <input type="radio" name="gender" value="F">
-        <label>Female</label>
-        <input type ="radio" name="gender"value ="o">
-        <label> other </label><br>
-        <input  class="hello" type="radio" name="gender" vlaue="M"><br>
-        <input type = "button" value ="submit">
-    </form>
-    </div>
-        
-    <h1 class="heading"><i style="font-size:24px;color: white;" class="fa">&#xf07a;</i></h1>
+ <div class="box">
+    <div class="form-box">
+        <h2>Sign Up</h2>
+        <form>
+            <div class="input-field ">
+            <label>First Name</label>
+            <input type="text" id="username" placeholder="" required=""><br>
+            <i class="fa " aria-hidden="true"></i>
+           <!---- <i class="fa fa-exclamation-circle" aria-hidden="true"></i> fa-check-circle------>
+
+
+            <span></span>
+            </div>
+            <div class="input-field">
+            <label>Last Name</label>
+            <input type="text"id="last" placeholder="" required=""><br>
+            <i class="fa " aria-hidden="true"></i>
+            <span></span>
+            </div>
+            <div class="input-field">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="" required=""><br>
+            <i class="fa " aria-hidden="true"></i>
+            <span></span>
+            </div>
+            <div class="input-field">
+            <label>Password</label>
+            <input type="password" id="pass1" placeholder="" required=""><br>
+            <i class="fa " aria-hidden="true"></i>
+            <span></span>
+            </div>
+            <div class="input-field">
+            <label>Confim Password</label>
+            <input type="password"id="pass2" placeholder="" required=""><br>
+            <i class="fa " aria-hidden="true"></i>
+            <span></span>
+            </div>
+            <div class="input-field">
+            <label>Gender</label>
+            <label>Male</label>
+            <input type="radio"id="male" name="gender" value="F">
+            </div>
+            <div class="input-field">
+            <label>Female</label>
+            <input type="radio"id="female" name="gender" value="o">
+            </div>
+            <div class="input-field">
+            <label> other </label><br>
+            <input type="radio" id="other" name="gender" vlaue="M">
+            </div>
+            <a href="login.html">
+            <input type="button" id="submit" value="submit">
+            </a>
     
-    <section>
-        
+        </form>
+        <p>By clicking the Sing Up button, you agree to our<br>
+        <a href="#">Terms and Condition </a>and <a href="#">policy privacy</a></p>
+    </div>   
+ </div>
+    <p class="para-2">Already have an account?<a href="login.html">Login here</a></p>
 
-        <div>
-         <img src="heel1.jpg">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, porro
-             voluptatibus nulla voluptatum, consequuntur necessitatibus in fugit repudiandae!</p>
-             <h6>$345.89</h6>
-             <span></span>
-             <button>Add-cart</button>
-        </div>
-        <div> <img src="heel5.jpg">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, porro
-             voluptatibus nulla voluptatum, consequuntur necessitatibus in fugit repudiandae!</p>
-             <h6>$345.89</h6>
-             <span></span>
-             <button>Add-cart</button>
-            </div>
-        <div> <img src="heel2.jpg">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, porro
-             voluptatibus nulla voluptatum, consequuntur necessitatibus in fugit repudiandae!</p>
-             <h6>$345.89</h6>
-             <span></span>
-             <button>Add-cart</button>
-            </div>
-        <div> <img src="heel.6.jpg">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, porro
-             voluptatibus nulla voluptatum, consequuntur necessitatibus in fugit repudiandae!</p>
-             <h6>$345.89</h6>
-             <span></span>
-             <button>Add-cart</button>
-            </div>
-    </section>
-    <div class="select">
-        <img src="logo1.png">
-        <p></p>
-         <h6>$345.89</h6>
-         <span></span>
-         <button></button>
-
-    </div>
-    <!---<script type="text/javascript">
-        var noti= document.querySelector('h1');
-        var select= document.querySelector('.select');
-        var button= document.getElementsByTagName('button')
-        for(but of button)
-        {
-            but.addEventListener('click',(e)=>{
-                var add= Number(noti.getAttribute('data-count')|| 0);
-                noti.setAttribute('data-count',add+1);
-                noti.classList.add('zero');
-                 
-
-                var parent = e.target.parentNode;
-                var clone = parent.cloneNode(true);
-                select.appendChild(clone);
-                clone.lastElementchild.innerText ="Buy-now";
-                if(clone){
-                    noti.onclick = ()=>{
-                        select.classList.toggle('display')
-                    }
-                }
-                var image= e.target.parentNode.querySelector('img');
-                var span = e.target.parentNode.querySelector('span');
-                var s_image = image.cloneNode(false);
-                span.appendChild(s_image);
-                span.classList.add('active');
-                setTimeout(()=>{
-                    span.removeChild(s_image);
-                span.classList.remove('active');
-
-
-                }, 500);
-
-            })
-        }
-
-    </script>----->
-    <script>
-         var noti = document.querySelector('h1');
-    var select = document.querySelector('.select');
-    var button = document.getElementsByTagName('button')
-    for (but of button) {
-        but.addEventListener('click', (e) => {
-            var add = Number(noti.getAttribute('data-count') || 0);
-            noti.setAttribute('data-count', add + 1);
-            noti.classList.add('zero');
-
-
-            var parent = e.target.parentNode;
-            var clone = parent.cloneNode(true);
-            select.appendChild(clone);
-            clone.lastElementChild.innerText = 'Buy-now';
-            if (clone) {
-                noti.onclick = () => {
-                    select.classList.toggle('display')
-                }
-            }
-
-            var image = e.target.parentNode.querySelector('img');
-            var span = e.target.parentNode.querySelector('span');
-            var s_image = image.cloneNode(false);
-            span.appendChild(s_image);
-            span.classList.add('active');
-            setTimeout(() => {
-                span.removeChild(s_image);
-                span.classList.remove('active');
-            }, 500);
-
-        })
-    }
-
-
-    </script>
-
-    
+  
 
 </body>
+
 </html>
+<script src="index.js"></script>

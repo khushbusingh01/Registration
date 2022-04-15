@@ -4,12 +4,19 @@ body{
 }
 .box{
     width: 360px;
-    height: 700px;
+    height: 800px;
     margin: auto;
     background-color: white;
     border-radius: 3px;
 }
-h1{
+.login-box{
+    width: 360px;
+    height: 280px;
+    margin: auto;
+    border-radius: 3px;
+    background-color: white;
+}
+h2{
     text-align: center;
     padding-top: 15px;
 }
@@ -38,17 +45,28 @@ input[type="button"]{
     border: none;
     background-color: #49c1a2;
     color: white;
-    font-size: 25px;
+    font-size: 18px;
     margin-top: 15px;
+}
+p{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+}
+.para-2{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-top: -10px;
+}
+.para-2 a{
+    color: #49c1a2;
+
 }
 input[type="radio"]{
     margin-bottom:-2000px ;
     padding-bottom: 50px;
     width: auto;
-    
-}
-.hello{
-    margin-bottom: 500px;
 }
 *{
     padding: 0;
@@ -228,4 +246,35 @@ section div:nth-child(4)>span.active{
 }
 .select div span{
     display: none;
+}
+.form-box .fa{
+    position: absolute;
+    right: 10px;
+    margin-top: -20px;
+    margin-right: 880px;
+    
+}
+.form-box .input-field.error input{
+    border-color: #f00;
+    
+}
+.form-box .input-field.error .fa{
+    color: #f00;
+}
+.form-box .input-field.Success input{
+    border-color: #0b0;
+    
+}
+.form-box .input-field.error .fa{
+    color: #f00;
+}
+.form-box .input-field.Success .fa{
+    color: #0b0;
+
+}
+.input-field.error span{
+    color: #f00;
+}
+.input-field.Success span{
+    color: #0b0;
 }
